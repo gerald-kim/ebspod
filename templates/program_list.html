@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Program list{% endblock %}
+
+{% block content %}
+<h1>프로그램 관리</h1>
+<div id="intro">
+</div>
+<table >
+<tr>
+    <th>프로그램명</th>
+</tr>
+{% for program in programs %}
+<tr>
+    <td><a href="{% url app.views.edit_program program.key.id %}">{{ program.title }}</a></th>
+</tr>
+{% endfor %} 
+</table>
+<a href="{% url app.views.new_program %}">[NEW]</a>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1></h1>
+<div id="intro">
+    <h2>{{program.title}}</h2>
+    {{program.description}}<br>
+    <a href="itpc://{{server_url}}{%url app.views.program_feed program.key.id %}">PODCAST</a>
+    
+</div>
+<hr>
+방송일: {{program.days_of_week}}<br>
+방송 시간: {{program.start|time:"H:i"}}~{{program.end|time:"H:i"}}<br>
+Episodes 
+<ul>
+    {% for episode in episodes %}
+    <li><a href="{{episode.url}}">{{episode.created_kst|date:"Y-m-d"}}일 방송</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

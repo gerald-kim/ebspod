@@ -1,0 +1,6 @@
+# encoding: utf-8
+
+AWS_ACCESS_KEY_ID = 'your amazon s3 key id'
+AWS_SECRET_ACCESS_KEY = 'your amazon s3 access key'
+BUCKET_NAME = "ebspod"
+SERVER_ADDR = 'http://localhost:8000'

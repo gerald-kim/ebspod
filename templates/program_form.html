@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Program list{% endblock %}
+
+{% block content %}
+<h1>프로그램 관리</h1>
+<div id="intro">
+</div>
+<form name="programForm" action="{%url app.views.save_program %}" method="post">
+<table>
+    {{ form.as_table }}
+    <tr>
+        <th>Created</th>
+        <td>{{program.created|date:"Y-m-d H:i"}}</td>
+    </tr>
+    <tr>
+        <th>Modified</th>
+        <td>{{program.modified|date:"Y-m-d H:i"}}</td>
+    </tr>
+</table>
+<input type="submit">
+</form>
+<a href="{%url app.views.list_program %}">[LIST]</a>
+{% endblock %}

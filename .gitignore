@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+*.swp
+ebs*.db
+settings_local.py
+recorder/ebs/ebs
+recorder/recorder_settings.py
+ebspod.tmproj
+.hg
+.hgignore

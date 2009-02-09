@@ -1,0 +1,3 @@
+{% if program %}
+{"title": "{{program.title}}", "id":"{{program.key.id}}", "start":"{{program.start}}", "end":"{{program.end}}"}
+{% endif %}
