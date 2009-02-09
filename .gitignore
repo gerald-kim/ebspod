@@ -5,6 +5,7 @@ ebs*.db
 settings_local.py
 recorder/ebs/ebs
 recorder/recorder_settings.py
+recorder/*.log
 ebspod.tmproj
 .hg
 .hgignore
